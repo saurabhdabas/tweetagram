@@ -6,6 +6,7 @@ The background-color should be a different colour than the nav and the body */
 header {
   height: 400px;
   width: 100%;
+  color:#FFFFFF;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,6 +14,8 @@ header {
   background-color: #daa520;
   background-image: url("/images/profile-background.png");
 }
-h2 > b{
-  color:#FFFFFF;
+header  p{
+  margin: 0;
+  font-size: 40px;
 }
+

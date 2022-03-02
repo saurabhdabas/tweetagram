@@ -38,32 +38,46 @@ $(document).ready(() => {
   }
   // Loop through tweets Database to render each tweet to the user.
   const renderTweet = (tweetsData) => {
-    // empty the tweet container
-    $('#tweets-container').empty();
+    $('#tweets-container').empty();// empty the tweet container
     for (let tweet of tweetsData) {
       const $tweet = createTweetElement(tweet);
       $('#tweets-container').prepend($tweet);
     }
   }
-  
+  // Validates the form 
+
+  const ValidateForm = () =>{
+    // Check if textarea is empty 
+    if(!$("textArea").val()){
+      alert("Tweet cannot be empty");
+      return false;
+    }else if($("textArea").val().length > 140){ // Checks if length of tweet greater than 140 characters
+      alert("Tweet cannot be longer than 140 characters");
+      return false;
+    }
+    return true;
+  }
+
   // Handling form Submission
 
   $("form").on("submit", function(event){
     event.preventDefault();
     // get user input that will be sent
     const formData = $(this).serialize();
-    // Sending a Post request
-    $.ajax({
-      type: "POST",
-      url: '/tweets',
-      data: formData,
-      success: function(){
-        console.log("success");
-        loadTweets();
-      },
-      dataType: 'string'
-    });
+    if(ValidateForm()){
+      // Sending a Post request
+      $.ajax({
+        type: "POST",
+        url: '/tweets',
+        data: formData,
+        success: function(){
+          console.log("success");
+          loadTweets();
+        },
+        dataType: 'string'
+      });
     // loadTweets();
+    };
   })
   // fetching tweets from the http://localhost:8080/tweets page
   const loadTweets = () => {
@@ -77,4 +91,5 @@ $(document).ready(() => {
     });
   }
   loadTweets();
+  
 });

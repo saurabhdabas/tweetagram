@@ -27,6 +27,7 @@ button{
   background-color: #4056A1;
   font-family: 'Bungee', cursive, sans-serif;
   border: none;
+  cursor:pointer;
 }
 .counter{
   font-family: 'Bungee', cursive, sans-serif;

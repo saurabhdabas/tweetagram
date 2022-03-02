@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="/styles/tweet-element.css" type="text/css" />
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
@@ -48,7 +48,7 @@
     <main id="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form method = "post" action = "/tweets">
+        <form method="POST" action="/tweets">
           <label for="tweet-text"><p><b>What are you humming about?</b></p></label>
           <textarea name="text" id="tweet-text" rows="1"></textarea>
           <div>
@@ -57,29 +57,7 @@
           </div>
         </form>
       </section>
-      <section class="tweet-container">
-        <article class="old-tweet">
-          <header class="old-tweet_header">
-            <div>
-              <img src="/images/profile-hex.png" alt ="user-avatar">
-              <span>Saurabh</span>
-            </div>
-            <span>@Saurabh</span>
-          </header>
-          <div class ="old-tweet_text">
-            <div>Hey Folks! Check my new website</div>
-          </div>
-          <footer class="old-tweet_footer">
-            <div>
-              <span>10 days ago</span>
-              <div>
-                <i class="fa-solid fa-flag"></i>
-                <i class="fa-solid fa-retweet"></i>
-                <i class="fa-solid fa-heart"></i>
-              </div>
-            </div>
-          </footer>
-        </article>
+      <section id="tweets-container">
       </section>
     </main>
   </body>

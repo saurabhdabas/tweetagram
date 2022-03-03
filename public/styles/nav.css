@@ -3,11 +3,11 @@ nav{
   justify-content: space-between;
   height: 120px;
   width: 100vw;
+  padding: 0 5px;
   background-color: #4056A1 ;
   color: #FFFFFF ;
   position:sticky;
-  top:0;
-
+  top:0
 }
 nav > span{
   font-family: 'Bungee', cursive, sans-serif;
@@ -16,6 +16,19 @@ nav > span{
 }
 span + span{
   font-family: 'Source Sans Pro', sans-serif;
+}
+span + span  div{
+  cursor: pointer;
+}
+
+span > i{
+  padding-top: 3px;
+  animation: down-up 2s infinite;
+}
+@keyframes down-up {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
 }
 .red-in-color{
   color:#ff0000;

@@ -30,7 +30,7 @@
     <nav id="navigation">
       <span>tweeter</span>
       <span>
-        <div><b>Write</b> a new tweet</div>
+        <div><strong>Write</strong> a new tweet</div>
         <i class="fa-solid fa-angles-down red-in-color"></i>
       </span>
     </nav>
@@ -47,7 +47,8 @@
     <!-- Page-specific (main) content here -->
     <main id="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+        <div class="validation-message"></div>
+        <h3>Compose Tweet</h3>
         <form method="POST" action="/tweets">
           <label for="tweet-text"><p><b>What are you humming about?</b></p></label>
           <textarea name="text" id="tweet-text" rows="1"></textarea>

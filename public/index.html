@@ -10,7 +10,7 @@
     <!---External Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,200;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hubballi&family=Raleway&display=swap" rel="stylesheet">
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
@@ -28,19 +28,21 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav id="navigation">
-      <span>tweeter</span>
+      <img src="/images/tweeter-logo.png" alt="tweeter-logo">
       <span>
         <div><strong>Write</strong> a new tweet</div>
         <i class="fa-solid fa-angles-down red-in-color"></i>
       </span>
     </nav>
+    
+    <!-- Header containing user-avatar and name of the user -->
     <header id ="header">
       <div>
-          <img src="/images/profile-hex.png"> 
+        <img src="/images/user-avatar.png" alt="user-avatar"> 
       </div>
       <br>
       <div>
-          <p><strong>Saurabh</strong> Dabas</p>
+        <p><strong>Saurabh</strong> Dabas</p>
       </div>
     </header>
 
@@ -48,9 +50,8 @@
     <main id="container">
       <section class="new-tweet">
         <div class="validation-message"></div>
-        <h3>Compose Tweet</h3>
         <form method="POST" action="/tweets">
-          <label for="tweet-text"><p><b>What are you humming about?</b></p></label>
+          <label for="tweet-text"><p>What are you humming about?</p></label>
           <textarea name="text" id="tweet-text" rows="1"></textarea>
           <div>
             <button type="submit">Tweet</button>

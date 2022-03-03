@@ -4,10 +4,22 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(() => {
+  $(".new-tweet").hide(); // By Default , our compose tweet section is hidden . 
+  $(".validation-message").hide(); // By Default our validation message is hidden.
   const tweetsData = [
 
   ];
   // Function to prevent cross scripting 
+  const escapeSpan = function (str) {
+    let span = document.createElement("span");
+    span.appendChild(document.createTextNode(str));
+    return span.innerHTML;
+  };
+  const escapeDiv = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
   // Create a tweet template that will be rendered
   const createTweetElement = (tweet) => {
     
@@ -16,16 +28,16 @@ $(document).ready(() => {
       <header class="old-tweet_header">
          <div>
           <img src="/images/profile-hex.png" alt ="user-avatar">
-          <span>${tweet["user"].name}</span>
+          <span>${escapeSpan(tweet["user"].name)}</span>
          </div>
-          <span>${tweet["user"].handle}</span>
+          <span>${escapeSpan(tweet["user"].handle)}</span>
       </header>
         <div class ="old-tweet_text">
-          <div>${tweet["content"].text}</div>
+          <div>${escapeDiv(tweet["content"].text)}</div>
         </div>
        <footer class="old-tweet_footer">
           <div>
-            <span>${timeago.format(tweet["created_at"])}</span>
+            <span>${escapeSpan(timeago.format(tweet["created_at"]))}</span>
               <div>
                 <i class="fa-solid fa-flag"></i>
                 <i class="fa-solid fa-retweet"></i>
@@ -49,12 +61,15 @@ $(document).ready(() => {
   const ValidateForm = () => {
     // Check if textarea is empty 
     if(!$("textArea").val()){
-      alert("Tweet cannot be empty");
+      $(".validation-message").text("Tweet can't be empty!").slideDown('fast');
       return false;
     }else if($("textArea").val().length > 140){ // Checks if length of tweet greater than 140 characters
-      alert("Tweet cannot be longer than 140 characters");
+      $(".validation-message").text("Tweet cannot be longer than 140 characters").slideDown('fast');
       return false;
     }
+    $('.validation-message').slideUp('fast');
+    $('textArea').val(""); // Clears the textbox 
+    $('.counter').text(140); // Resets the counter to 140.
     return true;
   }
 
@@ -91,5 +106,10 @@ $(document).ready(() => {
     });
   }
   loadTweets();
-  
+
+  // Stretch Part of the Project:
+  $("nav :last-child").on("click", function(event){
+    console.log("Write a tweet clicked");
+    $(".new-tweet").slideToggle('slow');
+  })
 });

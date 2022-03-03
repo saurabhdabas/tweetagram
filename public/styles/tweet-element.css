@@ -1,53 +1,48 @@
 #tweets-container{
-  margin : 30px 0;
+  margin : 1.25em 0;
+  color: var(--tertiary-color);
 }
 .old-tweet{
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  margin: 20px 0;
-  padding: 10px;
-  height: 150px;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 14px;
+  background-color: var(--primary-color);
+  margin: 0.83em 0;
+  padding: 1em;
+  height: 8em;
+  font-family: 'Hubballi', cursive;
+  font-size: 1em;
   font-weight: bold;
-  border: 3px solid #000000;
+  border-radius: 0.208em;
 }
 .old-tweet:hover{
-  box-shadow:10px 10px #707070;
+  box-shadow: 0.41em 0.41em var(--secondary-color);
 }
 .old-tweet_header{
-  display:flex;
-  justify-content:space-between;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 .old-tweet_header div{
-  display:flex;
+  display: flex;
   align-items: center;
 }
 .old-tweet_header img{
-  width:50px;
-  height:50px;
-  padding-right: 5px;
+  width: 2.08em;
+  height: 2.08em;
+  padding-right: 0.208em;
 }
 .old-tweet_footer{
-  border-top:3px solid #000000;
+  border-top: 0.125em solid var(--tertiary-color);
 }
 .old-tweet_footer > div{
-  display:flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px;
+  padding: 0.208em;
 }
-.fa-flag:hover{
-  cursor:pointer;
-  color:#daa520;
+.fa-flag:hover, .fa-retweet:hover, .fa-heart:hover{
+  cursor: pointer;
+  color: var(--secondary-color);
 };
-.fa-retweet:hover{
-  cursor:pointer;
-  color:#daa520;
-}
-.fa-heart:hover{
-  cursor:pointer;
-  color:#daa520;
-}
+

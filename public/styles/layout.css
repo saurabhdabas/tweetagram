@@ -14,9 +14,15 @@ html {
  * Global layout stuff
  */
 
+:root{
+  --primary-color:#012E76;
+  --secondary-color:#cf352e;
+  --tertiary-color:#FFFFFF;
+  --quaternary-color: #04AA6D;
+}
+
 body {
-  color: #545149;
-  background-color: #f4f1ec;
+  background-color: var(--tertiary-color);
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -28,7 +34,6 @@ body {
 center aligned to the body
 the same background colour as the <body> element */
 main{
-  width:90%;
-  background-color: #f4f1ec;
+  width: 90%;
   margin:0 auto;
 }

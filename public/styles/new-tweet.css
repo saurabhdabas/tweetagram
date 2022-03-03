@@ -1,49 +1,54 @@
 .new-tweet{
-  margin: 10px 0;
+  margin: 0.416em 0;
 }
 .validation-message{
-  border:2px solid #000000;
-  padding: 5px;
-  color:#ff0000;
-}
-h3{
-  margin: 0;
+  border: 0.08em solid var(--primary-color);
+  border-radius: 0.125em;
+  padding: 0.208em;
+  color: var(--secondary-color);
 }
 form{
   display:flex;
   flex-direction: column;
 }
-label > p{
-  margin:0;
+label p{
+  margin: 0;
+  padding: 0.208em 0;
+  font-family: 'Raleway',sans-serif;
 }
-form > div{
-  display:flex;
+form  div{
+  display: flex;
   justify-content: space-between;
-  padding-top: 5px;
+  padding-top: 0.208em;
 }
 textarea{
   border: none;
-  background-color: #f4f1ec;
-  border-bottom: 3px solid #000000;
+  border-radius: 0.208em;
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
   resize: none;
-  padding: 2px;
+  padding: 0.5em;
   outline: none;
   width: 100%;
-  height:50px;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 14px;
+  height:3em;
+  font-family: 'Hubballi', cursive;
+  font-size: 1em;
   font-weight: bold;
+  letter-spacing:0.08em;
 }
 button{
-  color: #FFFFFF;
-  background-color: #4056A1;
-  font-family: 'Bungee', cursive, sans-serif;
+  border-radius: 0.208em;
+  color: var(--tertiary-color);
+  background-color: var(--secondary-color);
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.75em;
   border: none;
-  cursor:pointer;
+  cursor: pointer;
 }
-.counter{
-  font-family: 'Bungee', cursive, sans-serif;
+output{
+  color: var(--quaternary-color);
 }
+/*This class gets added via javascript to counter and validation text*/
 .red-in-color{
-  color: #ff0000;
+  color: var(--secondary-color);
 }

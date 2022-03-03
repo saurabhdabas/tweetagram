@@ -1,19 +1,17 @@
-.new-tweet{
-  margin: 0.416em 0;
-}
-.validation-message{
+.validation-message {
   border: 0.08em solid var(--primary-color);
   border-radius: 0.125em;
-  padding: 0.208em;
+  padding: 0.5em;
   color: var(--secondary-color);
 }
 form{
   display:flex;
   flex-direction: column;
+  margin-bottom: 0.3em;
 }
 label p{
   margin: 0;
-  padding: 0.208em 0;
+  padding-bottom: 0.208em;
   font-family: 'Raleway',sans-serif;
 }
 form  div{
@@ -46,9 +44,11 @@ button{
   cursor: pointer;
 }
 output{
+  font-weight:600;
+  font-family: 'Source Sans Pro', sans-serif;
   color: var(--quaternary-color);
 }
-/*This class gets added via javascript to counter and validation text*/
+/*This class gets added via javascript to counter*/
 .red-in-color{
   color: var(--secondary-color);
 }

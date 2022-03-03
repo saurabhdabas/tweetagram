@@ -1,3 +1,4 @@
+
 /*
  * Client-side JS logic goes here
  * jQuery is already loaded
@@ -21,8 +22,7 @@ $(document).ready(() => {
     return div.innerHTML;
   };
   // Create a tweet template that will be rendered
-  const createTweetElement = (tweet) => {
-    
+  const createTweetElement = (tweet) =>{
     const $tweet =
       `<article class="old-tweet">
       <header class="old-tweet_header">
@@ -37,7 +37,7 @@ $(document).ready(() => {
         </div>
        <footer class="old-tweet_footer">
           <div>
-            <span>${escapeSpan(timeago.format(tweet["created_at"]))}</span>
+            <span class="red-in-color">${escapeSpan(timeago.format(tweet["created_at"]))}</span>
               <div>
                 <i class="fa-solid fa-flag"></i>
                 <i class="fa-solid fa-retweet"></i>
@@ -109,7 +109,7 @@ $(document).ready(() => {
 
   // Stretch Part of the Project:
   $("nav :last-child").on("click", function(event){
-    console.log("Write a tweet clicked");
+    event.stopPropagation();
     $(".new-tweet").slideToggle('slow');
   })
 });

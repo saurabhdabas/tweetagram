@@ -3,6 +3,7 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     <!-----Font awesome Library-->
     <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" type="text/css" />
     <!-- External CSS -->
@@ -17,12 +18,13 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet-element.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/media-queries.css" type="text/css" />
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
     <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/client.js"></script>
   </head>
 
   <body>
@@ -34,33 +36,33 @@
         <i class="fa-solid fa-angles-down red-in-color"></i>
       </span>
     </nav>
-    
-    <!-- Header containing user-avatar and name of the user -->
-    <header id ="header">
-      <div>
-        <img src="/images/user-avatar.png" alt="user-avatar"> 
-      </div>
-      <br>
-      <div>
-        <p><strong>Saurabh</strong> Dabas</p>
-      </div>
-    </header>
+    <div id="wrapper">
+      <!-- Header containing user-avatar and name of the user -->
+      <header id ="header">
+        <div>
+          <img src="/images/user-avatar.png" alt="user-avatar"> 
+        </div>
+        <br>
+        <div>
+          <p><strong>Saurabh</strong> Dabas</p>
+        </div>
+      </header>
 
-    <!-- Page-specific (main) content here -->
-    <main id="container">
-      <section class="new-tweet">
-        <div class="validation-message"></div>
-        <form method="POST" action="/tweets">
-          <label for="tweet-text"><p>What are you humming about?</p></label>
-          <textarea name="text" id="tweet-text" rows="1"></textarea>
-          <div>
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-      <section id="tweets-container">
-      </section>
-    </main>
+      <!-- Page-specific (main) content here -->
+      <main id="container">
+        <section class="new-tweet">
+          <div class="validation-message"></div>
+          <form method="POST" action="/tweets">
+            <label for="tweet-text"><p>What are you humming about?</p></label>
+            <textarea name="text" id="tweet-text" rows="1"></textarea>
+            <div>
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+        <section id="tweets-container"></section>
+      </main>
+    </div>
   </body>
 </html>

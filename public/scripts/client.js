@@ -7,6 +7,7 @@ $(document).ready(() => {
   const tweetsData = [
 
   ];
+  // Function to prevent cross scripting 
   // Create a tweet template that will be rendered
   const createTweetElement = (tweet) => {
     
@@ -38,15 +39,14 @@ $(document).ready(() => {
   }
   // Loop through tweets Database to render each tweet to the user.
   const renderTweet = (tweetsData) => {
-    $('#tweets-container').empty();// empty the tweet container
+    $('#tweets-container').empty();// empty the tweet container 
     for (let tweet of tweetsData) {
       const $tweet = createTweetElement(tweet);
       $('#tweets-container').prepend($tweet);
     }
   }
   // Validates the form 
-
-  const ValidateForm = () =>{
+  const ValidateForm = () => {
     // Check if textarea is empty 
     if(!$("textArea").val()){
       alert("Tweet cannot be empty");
@@ -70,22 +70,22 @@ $(document).ready(() => {
         type: "POST",
         url: '/tweets',
         data: formData,
-        success: function(){
-          console.log("success");
+        success: function() {
           loadTweets();
         },
         dataType: 'string'
       });
-    // loadTweets();
+    loadTweets();
     };
+    loadTweets();
   })
+  
   // fetching tweets from the http://localhost:8080/tweets page
   const loadTweets = () => {
     $.ajax({
       url: '/tweets',
       dataType: 'JSON',
-      success: function(data){
-        console.log("data received",data);
+      success: function(data) {
         renderTweet(data);
       },
     });

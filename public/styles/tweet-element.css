@@ -1,15 +1,12 @@
-#tweets-container{
-  margin : 1.25em 0;
+#tweets-container {
   color: var(--tertiary-color);
 }
 .old-tweet{
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction:column;
   background-color: var(--primary-color);
-  margin: 0.83em 0;
-  padding: 1em;
-  height: 8em;
+  margin-bottom: 0.83em;
+  padding:1em;
   font-family: 'Hubballi', cursive;
   font-size: 1em;
   font-weight: bold;
@@ -45,4 +42,6 @@
   cursor: pointer;
   color: var(--secondary-color);
 };
-
+.red-in-color{
+  color: var(--secondary-color);
+}

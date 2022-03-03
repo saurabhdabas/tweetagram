@@ -33,7 +33,14 @@ body {
  /* 90% of the width of its parent element
 center aligned to the body
 the same background colour as the <body> element */
+#wrapper{
+  display:flex;
+  margin: 0.83em 2em;
+}
 main{
   width: 90%;
+  display:flex;
+  flex-direction: column;
   margin:0 auto;
 }
+  

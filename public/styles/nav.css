@@ -1,29 +1,32 @@
 nav{
   display: flex;
   justify-content: space-between;
-  height: 120px;
-  width: 100vw;
-  padding: 0 5px;
-  background-color: #4056A1 ;
-  color: #FFFFFF ;
+  align-items: center;
+  height: 4em;
+  width: 100%;
+  padding: 0 0.41em;
+  background-color: #FFFFFF;
+  color: var(--primary-color) ;
   position:sticky;
   top:0
 }
-nav > span{
-  font-family: 'Bungee', cursive, sans-serif;
-  padding: 1.5em;
-  text-align: center;
+nav img{
+  height: 3em;
+  width: 5em;
 }
-span + span{
-  font-family: 'Source Sans Pro', sans-serif;
+nav span{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Raleway', sans-serif;
 }
-span + span  div{
+nav span div{
   cursor: pointer;
 }
 
 span > i{
-  padding-top: 3px;
-  animation: down-up 2s infinite;
+  padding-top: 0.125em;
+  animation: down-up 2s infinite; /* Adds animation to angled button in nav bar */
 }
 @keyframes down-up {
   0% { transform: translateY(0); }
@@ -31,5 +34,5 @@ span > i{
   100% { transform: translateY(0px); }
 }
 .red-in-color{
-  color:#ff0000;
+  color: var(--secondary-color) ; 
 }

@@ -7,6 +7,8 @@
 $(document).ready(() => {
   $(".new-tweet").hide(); // By Default , our compose tweet section is hidden . 
   $(".validation-message").hide(); // By Default our validation message is hidden.
+
+  // Our Database 
   const tweetsData = [
 
   ];
@@ -52,7 +54,7 @@ $(document).ready(() => {
   // Loop through tweets Database to render each tweet to the user.
   const renderTweet = (tweetsData) => {
     $('#tweets-container').empty();// empty the tweet container 
-    for (let tweet of tweetsData) {
+    for (let tweet of tweetsData){
       const $tweet = createTweetElement(tweet);
       $('#tweets-container').prepend($tweet);
     }
@@ -74,8 +76,7 @@ $(document).ready(() => {
   }
 
   // Handling form Submission
-
-  $("form").on("submit", function(event){
+  $("form").on("submit", function(event) {
     event.preventDefault();
     // get user input that will be sent
     const formData = $(this).serialize();
@@ -94,7 +95,7 @@ $(document).ready(() => {
     };
     loadTweets();
   })
-  
+
   // fetching tweets from the http://localhost:8080/tweets page
   const loadTweets = () => {
     $.ajax({

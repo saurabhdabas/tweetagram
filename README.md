@@ -16,3 +16,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Screenshots
+1. !["This shows my homepage with a tweetbox and default tweets in database "](https://raw.githubusercontent.com/saurabhdabas/tweetagram/ee77b7b58b9b374495f2f73a92e49bf39806047b/docs/tweet-box.png)
+2 !["This shows an error displayed above tweet box"](https://raw.githubusercontent.com/saurabhdabas/tweetagram/ee77b7b58b9b374495f2f73a92e49bf39806047b/docs/tweet-Error.png)
